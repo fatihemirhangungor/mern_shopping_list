@@ -7,3 +7,44 @@
 <img src="https://img.shields.io/badge/React-282C34?logo=react&logoColor=61DAFB" alt="React logo" title="React" height="25" />
 <img src="https://img.shields.io/badge/Node.js-282C34?logo=node.js&logoColor=339933" alt="Node.js logo" title="Node.js" height="25" />
 </p>
+
+Project Structure:
+```
+├── LICENSE
+├── README.md
+├── client
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   │       ├── AppNavBar.js
+│   │       └── ShoppingList.js
+│   ├── App.js
+│   ├── App.css
+│   └── package.json
+├── config
+│   └── keys.js
+├── models
+│   └── Item.js
+├── routes
+│   └── api
+│       └── Items.js
+├── server.js
+└── package.json
+```
+
+# Features
+- [x] Add Item
+- [x] Remove Item
+- [x] Update Item
+- [ ] Create Different Baskets
+
+<!--
+# Setup
+1. Environment setup:
+- The current code was run on Python 3.11.0, but it should work on Python 3.8+. Make 
+  sure to create a virtual environment and install the required packages:
+```zsh
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+-->
