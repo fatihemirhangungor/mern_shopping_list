@@ -9,8 +9,16 @@ import {
     NavLink,
     Container
 } from 'reactstrap';
+import {withStyles} from '@material-ui/core';
+
+const styles = ()=> ({
+    dFlex: {
+        display:'flex'
+    } 
+ });
 
 class AppNavbar extends Component {
+    
     state = {
         isOpen: false
     }
@@ -22,10 +30,13 @@ class AppNavbar extends Component {
     }
 
     render() {
+        const {
+            classes
+        } = this.props
         return (
             <div>
                 <Navbar color="dark" dark expand="sm" className="mb-5">
-                    <Container>
+                    <Container className={classes.dFlex}>
                         <NavbarBrand href="/">ShoppingList</NavbarBrand>
                         <NavbarToggler onClick={this.toggle} />
                         <Collapse isOpen={this.state.isOpen} navbar>
@@ -42,4 +53,4 @@ class AppNavbar extends Component {
     }
 }
 
-export default AppNavbar;
+export default withStyles(styles)(AppNavbar);
