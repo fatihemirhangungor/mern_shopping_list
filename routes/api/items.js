@@ -23,6 +23,17 @@ router.post('/', (req, res) => {
         .then(item => res.json(item));
 });
 
+// UPDATE -> api/items/id
+// Update an item
+router.put('/:id', (req, res) => {
+    const updatedItem = new Item({
+        name: req.body.name
+    });
+    Item.findById(req.body.id)
+    .then(item => item.name = updatedItem.name().then(() => res.json({success:true})))
+    .catch(err => res.status(404).json({success:false}));
+});
+
 // DELETE -> api/items/id
 // Delete an item
 router.delete('/:id', (req, res) => {

@@ -49,6 +49,20 @@ class ShoppingList extends Component {
                                     >&times;
                                     </Button>
 
+                                    <Button
+                                        className="warning-btn"
+                                        style={{float: 'right'}}
+                                        color="warning"
+                                        size="sm"
+                                        // onClick={() => {
+                                        //     this.setState(state => ({
+                                        //         items: state.items.filter(item => item.id !== id)
+                                        //     }));
+                                        // }}
+                                    >
+                                        Edit
+                                    </Button>
+
                                     {name}
                                 </ListGroupItem>
                             </CSSTransition>
